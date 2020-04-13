@@ -1,0 +1,120 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+::selection {
+  color: #fafafa;
+  background: hotpink;
+  padding: 5px;
+}
+
+body {
+  height: 100vh;
+  font: 40px/1.6 'Inter', sans-serif;
+  background: #fafafa top/75% url("/tilingLight.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #222;
+  animation: fadein 0.75s ease-in-out;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.copy {
+  color: rgb(145, 145, 145);
+  font-size: .5em;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.links svg {
+  height: 2.75em;
+  width: auto;
+}
+
+a:nth-of-type(1) {
+  animation: entrance 0.3s ease;
+}
+
+a:nth-of-type(2) {
+  animation: entrance 0.6s ease;
+}
+
+a:nth-of-type(3) {
+  animation: entrance 0.9s ease;
+}
+
+@keyframes entrance {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+a svg {
+  color: #222;
+  transition: color .2s ease-in-out;
+}
+
+a svg:visited {
+  color: #222;
+}
+
+a svg:hover {
+  color: hotpink;
+}
+
+h1 {
+  margin: .5em;
+}
+
+.links a {
+  margin: .7em;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #222 top/75% url("/tilingDark.svg");
+    color: #f2f2f2;
+  }
+
+  a svg {
+    color: #f2f2f2;
+  }
+
+  a svg:visited {
+    color: #f2f2f2;
+  }
+
+  a svg:hover {
+    color: hotpink;
+  }
+
+}
+
+@media only screen 
+  and (max-device-width: 600px) {
+    .links svg {
+      height: 2em;
+      width: auto;
+    }
+
+    .links a {
+      margin: 0em;
+    }
+}
