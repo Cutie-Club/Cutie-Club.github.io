@@ -44,6 +44,10 @@ body {
   width: auto;
 }
 
+.logo > svg {
+  max-width: 40vh;
+}
+
 a:nth-of-type(1) {
   animation: entrance 0.3s ease;
 }
